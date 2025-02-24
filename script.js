@@ -28,13 +28,13 @@ let track_list = [
     path: "b60241ef64e3906815f9dd11928deb10.mp3",
   },
   {
-    name: "Hass Hass",
+    name: "Aziyat",
     artist: "Diljit X Sia",
     image: "oggyx.webp",
-    path: "img12.mp3",
+    path: "Aziyat - Pratyush Dhiman.mp3",
   },
   {
-    name: "Aa",
+    name: "Nasheed",
     artist: "Arif Lohar, Deep Jandu",
     image: "aa.webp",
     path: "nasheed.mp3",
@@ -67,7 +67,7 @@ let track_list = [
     name: "Sulaim",
     artist: "SHADOW LADY SCXR SOUL",
     image: "img6.webp",
-    path: "AUD-20240624-WA0176..mp3",
+    path: "Beevi Rish NK, Zail.mp3",
   },
 ];
 
@@ -83,6 +83,9 @@ function random_bg_color() {
   // Set the background to that color
   document.body.style.background = bgColor;
 }
+
+// Change color every 5 seconds
+setInterval(random_bg_color, 3000);
 
 function loadTrack(track_index) {
   clearInterval(updateTimer);
