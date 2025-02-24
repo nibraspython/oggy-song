@@ -22,10 +22,10 @@ let curr_track = document.createElement("audio");
 // Define the tracks that have to be played
 let track_list = [
   {
-    name: "High Heels",
+    name: "jhol",
     artist: "Jaz Dhami Feat. Yo Yo Honey Singh",
     image: "https://ik.imagekit.io/eypz/1727596419416_7OfDs2puX.png",
-    path: "Derdime Derman.mp3",
+    path: "b60241ef64e3906815f9dd11928deb10.mp3",
   },
   {
     name: "Hass Hass",
@@ -37,7 +37,7 @@ let track_list = [
     name: "Aa",
     artist: "Arif Lohar, Deep Jandu",
     image: "aa.webp",
-    path: "Hass_Hass_Diljit_Dosanjh_Sia.mp3",
+    path: "nasheed.mp3",
   },
   {
     name: "Oggy",
