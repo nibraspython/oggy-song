@@ -30,7 +30,7 @@ let track_list = [
   {
     name: "Aziyat",
     artist: "Diljit X Sia",
-    image: "Screenshot (7).png",
+    image: "https://cdn.ironman.my.id/q/gZpzw.jpg",
     path: "Aziyat - Pratyush Dhiman.mp3",
   },
   {
@@ -42,7 +42,7 @@ let track_list = [
   {
     name: "Kahani_Suno",
     artist: "SHADOW LADY SCXR SOUL",
-    image: "Screenshot (4).png",
+    image: "https://cdn.ironman.my.id/q/gZpzw.jpg",
     path: "kahani_suno.mp3",
   },
   {
@@ -60,14 +60,14 @@ let track_list = [
   {
     name: "Ishq",
     artist: "SHADOW LADY SCXR SOUL",
-    image: "img6.webp",
+    image: "https://cdn.ironman.my.id/q/gZpzw.jpg",
     path: "bb710ac9db02e2e056b4370041205e8a.mp3",
   },
   {
     name: "Sulaim",
     artist: "SHADOW LADY SCXR SOUL",
-    image: "Screenshot (4).png",
-    path: "AUD-20240624-WA0176..mp3",
+    image: "https://cdn.ironman.my.id/q/gZpzw.jpg",
+    path: "https://cdn.ironman.my.id/q/gZpzw.jpg",
   },
 ];
 
