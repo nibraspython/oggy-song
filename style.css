@@ -260,6 +260,10 @@ body {
   color: rgba(0, 0, 0, 0.77);
 }
 
+.playlist-container {
+  max-height: 300px; /* Adjust the height as needed */
+  overflow-y: auto;
+}
 /* media query */
 
 @media screen and (max-width: 693px) {
