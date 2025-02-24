@@ -22,52 +22,52 @@ let curr_track = document.createElement("audio");
 // Define the tracks that have to be played
 let track_list = [
   {
-    name: "jhol",
-    artist: "Jaz Dhami Feat. Yo Yo Honey Singh",
+    name: "Jhol",
+    artist: "Mithoon & Arijit Singh",
     image: "https://ik.imagekit.io/eypz/1727596419416_7OfDs2puX.png",
-    path: "b60241ef64e3906815f9dd11928deb10.mp3",
+    path: "1c0a47960b0581817dfac596a058604f.mp3",
   },
   {
     name: "Aziyat",
     artist: "Diljit X Sia",
-    image: "oggyx.webp",
+    image: "Screenshot (7).png",
     path: "Aziyat - Pratyush Dhiman.mp3",
   },
   {
     name: "Nasheed",
     artist: "Arif Lohar, Deep Jandu",
-    image: "aa.webp",
+    image: "Screenshot (7).png",
     path: "nasheed.mp3",
   },
   {
-    name: "Oggy",
+    name: "Kahani_Suno",
     artist: "SHADOW LADY SCXR SOUL",
-    image: "high-heels.webp",
-    path: "AUD-20230914-WA0037.mp3",
+    image: "Screenshot (4).png",
+    path: "kahani_suno.mp3",
   },
   {
-    name: "Safwan",
+    name: "Teri Meri",
     artist: "SHADOW LADY SCXR SOUL",
-    image: "img5.webp",
-    path: "img11.mp3",
+    image: "Screenshot (4).png",
+    path: "b2814905d7a33c1106ee0aca91f1f9c7.mp3",
   },
   {
-    name: "Musli",
+    name: "Rauf & Faik",
     artist: "SHADOW LADY SCXR SOUL",
     image: "img6.webp",
-    path: "AUD-20240624-WA0176..mp3",
+    path: "b60241ef64e3906815f9dd11928deb10.mp3",
   },
   {
-    name: "Hanan Shah",
+    name: "Ishq",
     artist: "SHADOW LADY SCXR SOUL",
     image: "img6.webp",
-    path: "AUD-20240624-WA0176..mp3",
+    path: "bb710ac9db02e2e056b4370041205e8a.mp3",
   },
   {
     name: "Sulaim",
     artist: "SHADOW LADY SCXR SOUL",
-    image: "img6.webp",
-    path: "Beevi Rish NK, Zail.mp3",
+    image: "Screenshot (4).png",
+    path: "AUD-20240624-WA0176..mp3",
   },
 ];
 
@@ -85,7 +85,7 @@ function random_bg_color() {
 }
 
 // Change color every 5 seconds
-setInterval(random_bg_color, 3000);
+setInterval(random_bg_color, 4000);
 
 function loadTrack(track_index) {
   clearInterval(updateTimer);
@@ -138,6 +138,46 @@ function nextTrack() {
   playTrack();
 }
 
+function song1OnClick() {
+  loadTrack(0);
+  playTrack();
+}
+
+function song2OnClick() {
+  loadTrack(1);
+  playTrack();
+}
+
+function song3OnClick() {
+  loadTrack(2);
+  playTrack();
+}
+
+function song4OnClick() {
+  loadTrack(3);
+  playTrack();
+}
+
+function song5OnClick() {
+  loadTrack(4);
+  playTrack();
+}
+
+function song6OnClick() {
+  loadTrack(5);
+  playTrack();
+}
+
+function song7OnClick() {
+  loadTrack(6);
+  playTrack();
+}
+
+function song8OnClick() {
+  loadTrack(7);
+  playTrack();
+}
+
 function prevTrack() {
   if (track_index > 0) track_index -= 1;
   else track_index = track_list.length;
@@ -187,28 +227,4 @@ function seekUpdate() {
     curr_time.textContent = currentMinutes + ":" + currentSeconds;
     total_duration.textContent = durationMinutes + ":" + durationSeconds;
   }
-}
-
-// Load existing songs into the playlist
-document.addEventListener('DOMContentLoaded', (event) => {
-  loadSongs();
-});
-
-function loadSongs() {
-  let songList = document.getElementById('song-list');
-  songList.innerHTML = '';
-
-  track_list.forEach((track, index) => {
-    let songDiv = document.createElement('div');
-    songDiv.classList.add('loader');
-    songDiv.innerHTML = `
-      <div class="song">
-        <p class="name">${track.name}</p>
-        <p class="artist">${track.artist}</p>
-      </div>
-      <div class="album-cover" style="background-image: url('${track.image}');"></div>
-      <div class="play" onclick="loadTrack(${index}); playTrack();"><i class="fa fa-play"></i></div>
-    `;
-    songList.appendChild(songDiv);
-  });
 }
