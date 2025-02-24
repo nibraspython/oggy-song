@@ -138,46 +138,6 @@ function nextTrack() {
   playTrack();
 }
 
-function song1OnClick() {
-  loadTrack(0);
-  playTrack();
-}
-
-function song2OnClick() {
-  loadTrack(1);
-  playTrack();
-}
-
-function song3OnClick() {
-  loadTrack(2);
-  playTrack();
-}
-
-function song4OnClick() {
-  loadTrack(3);
-  playTrack();
-}
-
-function song5OnClick() {
-  loadTrack(4);
-  playTrack();
-}
-
-function song6OnClick() {
-  loadTrack(5);
-  playTrack();
-}
-
-function song7OnClick() {
-  loadTrack(6);
-  playTrack();
-}
-
-function song8OnClick() {
-  loadTrack(7);
-  playTrack();
-}
-
 function prevTrack() {
   if (track_index > 0) track_index -= 1;
   else track_index = track_list.length;
@@ -227,4 +187,28 @@ function seekUpdate() {
     curr_time.textContent = currentMinutes + ":" + currentSeconds;
     total_duration.textContent = durationMinutes + ":" + durationSeconds;
   }
+}
+
+// Load existing songs into the playlist
+document.addEventListener('DOMContentLoaded', (event) => {
+  loadSongs();
+});
+
+function loadSongs() {
+  let songList = document.getElementById('song-list');
+  songList.innerHTML = '';
+
+  track_list.forEach((track, index) => {
+    let songDiv = document.createElement('div');
+    songDiv.classList.add('loader');
+    songDiv.innerHTML = `
+      <div class="song">
+        <p class="name">${track.name}</p>
+        <p class="artist">${track.artist}</p>
+      </div>
+      <div class="album-cover" style="background-image: url('${track.image}');"></div>
+      <div class="play" onclick="loadTrack(${index}); playTrack();"><i class="fa fa-play"></i></div>
+    `;
+    songList.appendChild(songDiv);
+  });
 }
